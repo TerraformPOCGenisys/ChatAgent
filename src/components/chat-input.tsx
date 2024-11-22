@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useState, useRef, KeyboardEvent, useEffect } from "react";
 import { Loader2 } from "lucide-react";
-import aimodels from "@/aimodels";
+import aimodels from "@/AIModels";
 
 interface ChatInputProps {
   selectedModel: string;

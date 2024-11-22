@@ -1,4 +1,4 @@
-import { AIModel } from "./aimodel";
+import { AIModel } from "./AIModel";
 
 const aimodels: AIModel[] = [
   {

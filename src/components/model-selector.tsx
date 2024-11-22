@@ -5,7 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { AIModel } from "@/aimodel";
+import { AIModel } from "@/AIModel";
 
 interface ModelSelectorProps {
   value: string;
