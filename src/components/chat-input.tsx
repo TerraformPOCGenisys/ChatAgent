@@ -18,7 +18,7 @@ export function ChatInput({ selectedModel, onSend, isLoading }: ChatInputProps) 
 
   useEffect(() => {
     const modelDetails = aimodels.find((model) => model.name === selectedModel);
-    setPlaceholder(modelDetails?.uiContext?.inputPlaceholder);
+    setPlaceholder(modelDetails?.uiContext?.inputPlaceholder ?? "Type your query here");
     setMessage("");
   }, [selectedModel]);
 
@@ -49,7 +49,10 @@ export function ChatInput({ selectedModel, onSend, isLoading }: ChatInputProps) 
   };
 
   return (
-    <div className="flex gap-2 items-end bg-background border rounded-xl shadow-sm">
+    <div className="flex gap-2 items-end bg-background border shadow-sm"
+      style={{
+        borderRadius: "6px"
+      }}>
       {/* <svg className="_PromptEffectContainer_1nqq4_1">
         <defs>
           <linearGradient id="line-gradient" x1="20%" y1="0%" x2="-14%" y2="50%" gradientTransform="rotate(-110)">
@@ -87,6 +90,7 @@ export function ChatInput({ selectedModel, onSend, isLoading }: ChatInputProps) 
         rows={2}
         disabled={isLoading}
         style={{
+          borderRadius: "6px",
           maxHeight: "calc(2 * 1.5em)", // 2 rows * line-height (1.5em is default)
         }}
       />

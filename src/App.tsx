@@ -27,7 +27,7 @@ function App() {
       <div className="flex flex-col h-screen">
         <header className="flex h-14 items-center px-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="flex items-center gap-2">
-            <CircleDot className="h-4 w-4 text-green-500 animate-pulse" />
+            <CircleDot className="h-6 w-6 rainbow-stroke animate-pulse" />
             <div>
               <h1 className="font-semibold text-lg leading-none">Genisys T-Sense</h1>
               <p className="text-xs text-muted-foreground leading-none mt-0.5">Online and ready</p>

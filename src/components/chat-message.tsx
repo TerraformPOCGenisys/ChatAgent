@@ -20,7 +20,7 @@ export function ChatMessage({ message }: Readonly<ChatMessageProps>) {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(content);
+      await navigator.clipboard.writeText(message.content);
       setCopied(true);
       toast({
         description: "Message copied to clipboard",
@@ -29,7 +29,7 @@ export function ChatMessage({ message }: Readonly<ChatMessageProps>) {
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
-        description: "Failed to copy message",
+        description: `Failed to copy message${err}`,
         variant: "destructive",
       });
     }
@@ -41,9 +41,9 @@ export function ChatMessage({ message }: Readonly<ChatMessageProps>) {
     )}>
       <div className="flex h-8 w-8 shrink-0 select-none items-center justify-center rounded-md border shadow bg-background">
         {message.role === "assistant" ? (
-          <Bot className="h-4 w-4" />
+          <Bot className="h-4 w-4 bot-svg-stroke" />
         ) : (
-          <User className="h-4 w-4" />
+          <User className="h-4 w-4 user-svg-stroke" />
         )}
       </div>
       <div className="flex flex-col gap-1.5 max-w-[80%]">
