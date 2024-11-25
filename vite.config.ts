@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/ChatAgent/',
   envPrefix:'GEN_',
   resolve: {
     alias: {
