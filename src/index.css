@@ -106,10 +106,12 @@ body {
 
 .bot-svg-stroke {
   stroke: var(--bot-stroke-color);
+  filter: drop-shadow(0 0 4px var(--bot-stroke-color));
 }
 
 .user-svg-stroke {
   stroke: var(--user-stroke-color);
+  filter: drop-shadow(0 0 4px var(--user-stroke-color));
 }
 
 .rainbow-stroke circle:first-child {
